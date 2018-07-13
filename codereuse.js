@@ -39,14 +39,13 @@ if(dog.energy + time < 100) {
 }
 }
 
-
 //functional class
-var Dog = function(name, breed, age, happiness, hunger, energy){
-  this.name = name;
-  this.breed = breed;
-  this.age = age;
-  this.happiness = happiness;
-  this.hunger = hunger;
-  this.energy = energy;
+var doglike = function(obj, name, breed, age, happiness, hunger, energy) {
+  obj.name = name;
+  obj.breed = breed;
+  obj.age = age;
+  obj.happiness = happiness;
+  obj.hunger = hunger;
+  obj.energy = energy;
+  return obj;
 }
-
