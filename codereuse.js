@@ -98,3 +98,47 @@ if(this.energy + time < 100) {
   this.energy = 100;
 }
 }
+
+//Psuedoclassical
+
+var Dog = function(name, breed, age, happiness, hunger, energy) {
+
+  this.name= name;
+  this.breed= breed;
+  this.age= age;
+  this.happiness= happiness;
+  this.hunger= hunger;
+  this.energy= energy;
+
+}
+
+Dog.prototype.feed = function (food) {
+if(this.hunger - food > 0) {
+  this.hunger -= food;
+} else {
+  this.hunger = 0;
+}
+}
+
+Dog.prototype.play = function(time) {
+if(this.happiness + time < 100) {
+  this.happiness += time;
+} else {
+  this.happiness = 100;
+}
+
+if(this.energy - time > 0) {
+  this.energy -= time;
+} else {
+  this.energy = 0;
+}
+}
+
+Dog.prototype.nap = function(time) {
+if(this.energy + time < 100) {
+  this.energy += time;
+} else {
+  this.energy = 100;
+}
+}
+
